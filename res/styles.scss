@@ -1,9 +1,77 @@
+$headerHeight: 50px;
+
+// colors
+$purple: #94C;
 
 html, body {
-  margin: 0;
   padding: 0;
+  margin: 0;
+  font-family: "Helvetica neue", Helvetica, Arial, sans-serif;
+  font-size: 62.5%;
 }
 
 * { // Just makes everything so much easier
   box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a, a:active, a:hover, a:visited {
+  text-decoration: none;
+  color: #FFF;
+  padding-right: 20px;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: $headerHeight;
+  padding: 5px 10%;
+
+  .title {
+    margin: 0;
+    line-height: $headerHeight - 10;
+    font-size: $headerHeight - 10;
+    color: #FFF;
+  }
+}
+
+.section {
+  padding: $headerHeight 10%;
+}
+
+.splash {
+  width: 100%;
+  height: 100vh;
+  background-color: #3CC;
+}
+
+.bio {
+
+  h1 {
+    text-align: center;
+    font-size: 3.2rem;
+    color: $purple;
+
+    -webkit-text-stroke: 1px #000;
+
+    font-family: "Cinzel", Times, serif;
+    font-weight: 900;
+  }
+
+  .pitch {
+    margin: 0 10%;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+}
+
+footer {
+  background-color: #000;
+  color: #FFF;
+  padding: $headerHeight 15%;
 }
