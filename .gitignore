@@ -1,6 +1,4 @@
 node_modules
 .sass-cache
-public/src/build.js
-public/res/*.css
-public/res/*.map
+build/*
 .env

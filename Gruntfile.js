@@ -6,17 +6,16 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: [
-          'src/calendar.js',
-          'src/push-notification.js'
+          'src/spidersite.js'
         ],
-        dest: 'public/src/build.js'
+        dest: 'build/build.js'
       }
     },
 
     uglify: {
       build: {
-        src: 'public/src/build.js',
-        dest: 'public/src/build.js'
+        src: 'build/build.js',
+        dest: 'build/build.js'
       }
     },
 
@@ -26,7 +25,7 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {
-          'public/res/styles.css': 'res/styles.scss'
+          'build/styles.css': 'res/styles.scss'
         }
       }
     }
