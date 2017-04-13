@@ -36,16 +36,18 @@ header {
     height: 40px;
     padding: 6px; }
 
-h1 {
+h1, h2, h3, h4, h5 {
   font-family: "Luckiest Guy", sans-serif;
-  font-weight: 900;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  word-spacing: 1px; }
+
+h1 {
+  font-weight: 900; }
 
 h2 {
   font-size: 2.4rem;
-  font-family: "Luckiest Guy", sans-serif;
   font-weight: 200;
-  text-transform: uppercase;
   margin-top: 0; }
 
 .section {
@@ -92,39 +94,41 @@ h2 {
   -webkit-text-stroke: 0.5px #C9F;
   text-stroke: 0.5px #C9F; }
 
-.bio .pitch {
+.bio article {
   margin: 0 10%;
   font-size: 1.6rem;
   line-height: 2.2rem;
   letter-spacing: -0.2px;
-  word-spacing: 1px; }
+  word-spacing: 1px;
+  text-align: justify; }
   @media (max-width: 720px) {
-    .bio .pitch {
+    .bio article {
       margin: 0; } }
+
+.flex-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  @media (max-width: 720px) {
+    .flex-3 {
+      flex-direction: column; } }
+  .flex-3 * {
+    flex: 1;
+    padding: 10px; }
 
 footer {
   position: relative;
-  padding: 100px 15%;
+  padding: 100px 15% 25px 15%;
   margin-top: 75px;
   background-color: #000;
   color: #FFF;
-  font-size: 1.6rem; }
-  footer a {
-    padding: 10px; }
-  footer .right {
-    float: right; }
-  footer .left {
-    float: left; }
-  @media (max-width: 720px) {
-    footer .right {
-      float: left; }
-    footer .left {
-      float: left; } }
+  font-size: 1.6rem;
+  text-align: center; }
   footer .icon {
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    border: 10px solid #000;
+    border: 12px solid #000;
     margin: -150px auto 0 auto;
     background-color: #000;
     background: url("../img/GfS_small.png");
