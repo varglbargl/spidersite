@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5 {
   word-spacing: 1px; }
 
 h1 {
+  font-size: 3.2rem;
   font-weight: 900; }
 
 h2 {
@@ -52,6 +53,8 @@ h2 {
 
 .section {
   padding: 0 10%; }
+  .section:first-child {
+    padding-top: 50px; }
   @media (max-width: 720px) {
     .section {
       padding: 0 5%; } }
