@@ -13,6 +13,32 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
+@keyframes jiggle {
+  0% {
+    vertical-align: -25%;
+  }
+  50% {
+    vertical-align: 25%;
+  }
+  100% {
+    vertical-align: -25%;
+  }
+}
+
+@mixin jiggle-text ($duration, $offset) {
+  animation: jiggle #{$duration}s cubic-bezier(.42,0,.58,1) #{$offset/-10}s infinite;
+}
+
+@for $i from 0 through 9 {
+  .jigg-#{$i} {
+    @include jiggle-text(1, $i);
+  }
+}
+
+.jiggle {
+  line-height: 0.5;
+}
+
 * { // Just makes everything so much easier
   box-sizing: border-box;
   outline-color: $lightUrple;

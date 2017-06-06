@@ -1,1 +1,1 @@
-$(function(){});
+$(function(){$(".jiggle").val(function(){for(var a=this.innerText,b="",c=0;c<a.length;c++)b=b+'<span class="jigg-'+c%10+'">'+a[c]+"</span>";this.innerHTML=b})});
