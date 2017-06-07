@@ -100,14 +100,31 @@ h2 {
 
 .section {
   padding: 0 10%;
+  position: relative;
 
   &:first-child {
     padding-top: $headerHeight;
   }
+}
 
-  @media (max-width: 720px) {
-    padding: 0 5%;
+@keyframes parallax {
+  0% {
+    background-position: 0px 0px;
   }
+  100% {
+    background-position: 620px 1240px;
+  }
+}
+
+.parallax {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  background: url("../img/parts-tile.png");
+  animation: parallax 20s linear 0s infinite;
 }
 
 .splash {
@@ -116,26 +133,28 @@ h2 {
   height: 90vh;
 
   background-color: #3CC;
-  background: url("../img/gfs-ibm-splash.png");
+  background: url("../img/fio-bkg.jpg");
   background-position: 50% 0;
   background-size: cover;
 
   text-align: center;
 
   .cta {
-    margin: 0 auto;
-    margin-top: 40vh;
+    position: absolute;
+    left: calc(50% - 250px);
+    top: 40%;
     max-width: 500px;
 
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.6);
 
     padding: 30px;
     color: #FFF;
 
-    @media (max-width: 720px) {
-      max-width: 100%;
+    @media (max-width: 550px) {
+      left: 20px;
+      right: 20px;
       padding: 5%;
 
       .signup {
@@ -168,6 +187,13 @@ h2 {
 
     -webkit-text-stroke: 0.5px $lightUrple;
     text-stroke: 0.5px $lightUrple;
+  }
+
+  .logo {
+    width: 650px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
   }
 
   article {
