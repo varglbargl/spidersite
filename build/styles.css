@@ -101,11 +101,11 @@ h2 {
 
 @keyframes parallax {
   0% {
-    background-position: 0 5%; }
+    background-position: 0 5px; }
   50% {
-    background-position: 0 -5%; }
+    background-position: 0 -5px; }
   100% {
-    background-position: 0 5%; } }
+    background-position: 0 5px; } }
 
 .parallax-one {
   position: absolute;
