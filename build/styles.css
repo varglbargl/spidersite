@@ -99,17 +99,13 @@ h2 {
   .section:first-child {
     padding-top: 50px; }
 
-@keyframes parallax-one {
+@keyframes parallax {
   0% {
-    background-position: 0px 0px; }
+    background-position: 0 5%; }
+  50% {
+    background-position: 0 -5%; }
   100% {
-    background-position: 620px 1240px; } }
-
-@keyframes parallax-two {
-  0% {
-    background-position: 0px 0px; }
-  100% {
-    background-position: 0px 1240px; } }
+    background-position: 0 5%; } }
 
 .parallax-one {
   position: absolute;
@@ -118,7 +114,7 @@ h2 {
   top: 0;
   bottom: 0;
   background: url("../img/parts-tile.png");
-  animation: parallax-one 13s linear 0s infinite; }
+  animation: parallax 2s cubic-bezier(0.42, 0, 0.58, 1) 0s infinite; }
 
 .parallax-two {
   position: absolute;
@@ -127,7 +123,7 @@ h2 {
   top: 0;
   bottom: 0;
   background: url("../img/parts-tile-2.png");
-  animation: parallax-two 9s linear 0s infinite; }
+  animation: parallax 2s cubic-bezier(0.42, 0, 0.58, 1) -0.5s infinite; }
 
 .splash {
   overflow: hidden;

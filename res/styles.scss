@@ -4,6 +4,8 @@ $headerHeight: 50px;
 $purple:       #94C;
 $lightUrple:   #C9F;
 
+$easeInOut: cubic-bezier(.42,0,.58,1);
+
 html, body {
   padding: 0;
   margin: 0;
@@ -26,7 +28,7 @@ html, body {
 }
 
 @mixin jiggle-text ($duration, $offset) {
-  animation: jiggle #{$duration}s cubic-bezier(.42,0,.58,1) #{$offset/-10}s infinite;
+  animation: jiggle #{$duration}s $easeInOut #{$offset/-10}s infinite;
 }
 
 @for $i from 0 through 9 {
@@ -107,21 +109,16 @@ h2 {
   }
 }
 
-@keyframes parallax-one {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: 620px 1240px;
-  }
-}
+@keyframes parallax {
 
-@keyframes parallax-two {
   0% {
-    background-position: 0px 0px;
+    background-position: 0 5%;
+  }
+  50% {
+    background-position: 0 -5%;
   }
   100% {
-    background-position: 0px 1240px;
+    background-position: 0 5%;
   }
 }
 
@@ -133,7 +130,7 @@ h2 {
   bottom: 0;
 
   background: url("../img/parts-tile.png");
-  animation: parallax-one 13s linear 0s infinite;
+  animation: parallax 2s $easeInOut 0s infinite;
 }
 
 .parallax-two {
@@ -144,7 +141,7 @@ h2 {
   bottom: 0;
 
   background: url("../img/parts-tile-2.png");
-  animation: parallax-two 9s linear 0s infinite;
+  animation: parallax 2s $easeInOut -0.5s infinite;
 }
 
 .splash {
