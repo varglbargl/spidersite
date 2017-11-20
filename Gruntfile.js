@@ -6,7 +6,6 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: [
-          'node_modules/jquery/dist/jquery.min.js',
           'src/spidersite.js'
         ],
         dest: 'build/build.js'
