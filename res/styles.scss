@@ -102,6 +102,7 @@ h2 {
 
 .section {
   padding: 0 10%;
+  padding-bottom: 25px;
   position: relative;
 
   &:first-child {
@@ -112,13 +113,13 @@ h2 {
 @keyframes parallax {
 
   0% {
-    background-position: 0 5px;
+    background-position: -40px 5px;
   }
   50% {
-    background-position: 0 -5px;
+    background-position: -40px -5px;
   }
   100% {
-    background-position: 0 5px;
+    background-position: -40px 5px;
   }
 }
 
@@ -142,6 +143,14 @@ h2 {
 
   background: url("../img/parts-tile-2.png");
   animation: parallax 2s $easeInOut -0.5s infinite;
+}
+
+.friangle {
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  top: -100px;
+  left: 0;
 }
 
 .splash {
@@ -199,6 +208,8 @@ h2 {
 .bio {
 
   h1 {
+    margin-top: 0;
+    padding-top: 20px;
     text-align: center;
     color: $purple;
 
@@ -248,7 +259,7 @@ h2 {
 
 footer {
   position: relative;
-  padding: 100px 15% 25px 15%;
+  padding: 50px 15% 25px 15%;
   margin-top: 75px;
 
   background-color: #000;
@@ -261,11 +272,21 @@ footer {
     height: 100px;
     border-radius: 50px;
     border: 12px solid #000;
-    margin: -150px auto 0 auto;
+    margin: 0 auto;
+
+    position: absolute;
+    top: -95px;
+    left: calc(50% - 50px);
 
     background-color: #000;
     background: url("../img/GfS_small.png");
     background-size: cover;
     background-position: 50%;
+
+    transition: transform .5s $easeInOut;
+
+    &:hover {
+      transform: rotate(60deg);
+    }
   }
 }
