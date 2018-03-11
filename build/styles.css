@@ -127,7 +127,7 @@ h2 {
   animation: parallax 2s cubic-bezier(0.42, 0, 0.58, 1) -0.5s infinite; }
 
 .friangle {
-  width: 100vw;
+  width: 100%;
   height: 100px;
   position: absolute;
   top: -100px;
@@ -155,6 +155,7 @@ h2 {
     @media (max-width: 550px) {
       .splash .cta {
         left: 20px;
+        top: 25%;
         right: 20px;
         padding: 5%; }
         .splash .cta .signup {
