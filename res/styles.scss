@@ -125,6 +125,7 @@ h2 {
 
 .parallax-one {
   position: absolute;
+  background-size: cover;
   left: 0;
   right: 0;
   top: 0;
@@ -136,6 +137,7 @@ h2 {
 
 .parallax-two {
   position: absolute;
+  background-size: cover;
   left: 0;
   right: 0;
   top: 0;
@@ -170,6 +172,7 @@ h2 {
     left: calc(50% - 250px);
     top: 40%;
     max-width: 500px;
+    z-index: 2;
 
     border: none;
     border-radius: 10px;
@@ -180,7 +183,7 @@ h2 {
 
     @media (max-width: 550px) {
       left: 20px;
-      top: 25%;
+      top: 30%;
       right: 20px;
       padding: 5%;
 
