@@ -58,6 +58,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
 
   height: $headerHeight;
   padding: 5px 10%;
@@ -172,7 +173,7 @@ h2 {
     left: calc(50% - 250px);
     top: 40%;
     max-width: 500px;
-    z-index: 2;
+    z-index: 1;
 
     border: none;
     border-radius: 10px;
