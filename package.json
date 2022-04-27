@@ -12,7 +12,7 @@
   },
   "homepage": "https://gamesforspiders.com",
   "dependencies": {
-    "grunt": "^1.3.0",
+    "grunt": "^1.5.2",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-uglify": "^3.4.0",
     "grunt-sass": "^2.1.0"
